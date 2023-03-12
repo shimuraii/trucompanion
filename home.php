@@ -1,1 +1,6 @@
-<h1> Hello world! </h1>
+<?php 
+
+// check if username and password match and exist otherwise go back to index, otherwise include mainpage.php
+
+
+?>
