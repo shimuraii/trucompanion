@@ -25,9 +25,7 @@ if ($page == 'starterpage')
         } 
         // When invalid
         else {
-            $display_modal_window = 'signin';
-            $error_msg_username = '* Wrong username, or';
-            $error_msg_password = '* Wrong password';
+            $msg = "<div class='alert alert-danger' role='alert'>Error -  Account credentials are wrong or it does not exist.</div>";
             include('starterpage.php');
         }
         break;
