@@ -8,6 +8,11 @@
 
     you should be good to run the project as of now :).
 
-2. How it works
+2. How it works 
+
+    For testing purposes,
+    Username: gus 
+    Password: gus
+
     Controller.php controlls most of the game, model.php has some (not all) functions :).
     Documentation still in progress as the project is still in progress.
