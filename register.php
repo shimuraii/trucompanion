@@ -71,6 +71,13 @@ body{
 
     <div class="mb-3">
         <form action="controller.php" method="post">
+            <input type='hidden' name='page' value='register'>
+            <input type='hidden' name='command' value='register'>
+
+            <label for="FormControlInput2" class="form-label">Username</label>
+            <input type="text" name="username" required="required" style="width: 75%;" class="form-control" id="exampleFormControlInput1">
+            
+
             <label for="FormControlInput2" class="form-label">Name</label>
             <input type="text" name="name" required="required" style="width: 75%;" class="form-control" id="exampleFormControlInput1">
             
@@ -84,6 +91,9 @@ body{
             
             <label for="FormControlTextarea3" class="form-label">Bio</label>
             <textarea class="form-control" required="required" name="bio" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+            <label for="FormControlTextarea3" class="form-label">Social Media link</label>
+            <textarea class="form-control" required="required" name="sm" id="exampleFormControlTextarea1" rows="3"></textarea>
             <br>
             
             Monday
