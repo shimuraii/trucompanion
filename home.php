@@ -1,7 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TRU Companion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <form action="controller.php" method="post">
+            <input type='hidden' name='page' value='MainPage'>
+            <input type='hidden' name='command' value='SignOut'>
+            <button type='submit'>Sign Out</button>
+        </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 
 <h1 style="text-align:center;"> Your Available Times: </h1>
 
 <?php 
+
+$db_host = 'localhost';
+$db_user = 'root';
+$db_password = 'root';
+$db_db = 'People';
+$db_port = 8889;
+$conn = mysqli_connect($db_host, $db_user ,$db_password, $db_db);
 
 
 $time_map = array(
@@ -174,12 +202,56 @@ $time_map = array(
     'SU23' => 'Sunday 23:00',
     'SU24' => 'Sunday 24:00'
 );
+function find_time($e){
+    global $conn;
+    
+    $sql = "SELECT Timeslot from Schedule where Email LIKE '$e'";  // where Question is like 
+    $result = mysqli_query($conn, $sql);
 
+    $data = [];
+    while($row = mysqli_fetch_assoc($result)){
+        array_push($data, $row);
+    }
+
+    return $data;
+};
 
     $s = $_SESSION['user_s'];
     foreach($s as $e){
-        echo "<p style='text-align:center'>" . $time_map[$e]  . "</p>" . "<br>";
+        echo "<p style='text-align:center'>" . $time_map[$e]  . "</p>";
     }
+    echo "<marquee style='font-size:40px;'>Check other people's times!!</marquee>";
+    $u = $_SESSION['data'];
+    foreach ($u as $element) {
+        if ($element['Username'] == $_SESSION['username']){
+
+        }
+        else{
+            echo "<div class='card-group'>
+            <div class='card' style='text-align: center;width: 18rem;'>
+            <div class='card-body'>
+            <h5 class='card-title'>" . $element['Name'] ."</h5>
+            <p class='card-text'>". $element['bio'] ."</p>
+            <a href='" . $element['sm'] .  "' class='card-link'>Social Media link</a><br>
+            <a href = 'mailto:". $element['Email'] ."?subject = Feedback&body = Message'>". $element['Email'] ."</a><br><br>
+          ";
+            $email = get_email($element['Username']);
+            $email = json_encode($email);
+            $array = json_decode($email, true);
+            $em = $array[0]['Email'];   
+            $time = find_time($em);
+
+            $time = json_encode($time);
+            $arr = json_decode($time, true);
+            
+            foreach ($arr as $element) {
+                foreach ($element as $key => $value) {
+                    echo "<p style='text-align:center'>" . $time_map[$value]  . "</p>";
+                }
+            }
+            echo "</div> </div> </div>";
+        }
+    };
 ?>
 
 <!doctype html>
@@ -200,6 +272,4 @@ $time_map = array(
   
 
   </body>
-
-<marquee style='font-size:40px;'>Check other people's times!!</marquee>
 

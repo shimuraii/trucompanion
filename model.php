@@ -40,14 +40,14 @@ function get_email($u){
 
     return $data;
 }
-function get_alle(){
+function get_all(){
     global $conn;
     
-    $sql = "SELECT Email from Users";  // where Question is like 
+    $sql = "SELECT * from Users";  // where Question is like 
     $result = mysqli_query($conn, $sql);
 
     $data = [];
-    while($row = mysqli_fetch_array($result)){
+    while($row = mysqli_fetch_assoc($result)){
         array_push($data, $row);
     }
 

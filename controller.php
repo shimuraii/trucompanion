@@ -37,6 +37,13 @@ if ($page == 'starterpage')
                     array_push($user_s, $value);
                 }
             }
+            $all = get_all();
+
+            $all = json_encode($all);
+            $al = json_decode($all, true);
+            $_SESSION['data'] = $al;
+            
+
             $_SESSION['user_s'] = $user_s;
             
             $_SESSION['email'] = $msg;
@@ -118,25 +125,15 @@ else if ($page == 'register'){
 }
 
 else if ($page == 'MainPage') 
-{
-    session_start();  // in order to access session variables
-    
-    if (!isset($_SESSION['signedin'])) {
-        $display_modal_window = 'none';
-        include ('view_startpage.php');
-        exit;
-    }
-    
-    $username = $_SESSION['username'];
-
+{  
+    $command = $_POST['command'];
     switch ($command) {
+      
     case 'SignOut':  // 'SignOut' menu item, or timeout
         session_unset();
         session_destroy();  // It does not unset session variables. session_unset() is needed.
         $display_modal_window = 'none';
-        include ('view_startpage.php');
-        break;
-    case 'SearchQestions':  // It uses $username.
+        include ('starterpage.php');
         break;
     }
 }
