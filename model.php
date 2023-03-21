@@ -27,7 +27,32 @@ function user_exists($e) {  // It returns a Boolean value.
          return false;
 
 }
+function get_email($u){
+    global $conn;
+    
+    $sql = "SELECT Email from Users where Username LIKE '$u'";  // where Question is like 
+    $result = mysqli_query($conn, $sql);
 
+    $data = [];
+    while($row = mysqli_fetch_array($result)){
+        array_push($data, $row);
+    }
+
+    return $data;
+}
+function find_times($e){
+    global $conn;
+    
+    $sql = "SELECT Timeslot from Schedule where Email LIKE '$e'";  // where Question is like 
+    $result = mysqli_query($conn, $sql);
+
+    $data = [];
+    while($row = mysqli_fetch_assoc($result)){
+        array_push($data, $row);
+    }
+
+    return $data;
+}
 function signup_user($u, $p, $e) { // inserts user
     global $conn;
     $current_date = date("Ymd");  // There is an example in Seminar 6.docx.

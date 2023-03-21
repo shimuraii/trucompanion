@@ -20,7 +20,27 @@ if ($page == 'starterpage')
             session_start();
             $_SESSION['signedin'] = 'YES';  // session variable - for commands coming from MainPage
             $_SESSION['username'] = $username;  // session variable - for command coming from MainPage
-            $msg = "works";
+            $email = get_email($username);
+            
+            $email = json_encode($email);
+            $array = json_decode($email, true);
+            $msg = $array[0]['Email'];
+
+            $times = find_times($msg);
+
+            $times = json_encode($times);
+            $arr = json_decode($times, true);
+            $user_s = [];
+            
+            foreach ($arr as $element) {
+                foreach ($element as $key => $value) {
+                    array_push($user_s, $value);
+                }
+            }
+            $_SESSION['user_s'] = $user_s;
+
+            $_SESSION['email'] = $msg;
+            
             include('home.php');
         } 
         // When invalid
@@ -65,17 +85,20 @@ else if ($page == 'register'){
 
         if (mysqli_query($conn, $sql)) {
             if (empty($_POST['dates'])) {
+                $msg = "<div class='alert alert-danger' role='alert'>Error, no dates registered!</div>";
+                include 'register.php';
+                mysqli_close($conn);
+                exit();
+            }
+            else{
                 foreach($_POST['dates'] as $value){
                     $sql = "INSERT INTO `Schedule` (`Email`, `Timeslot`) VALUES ('".$email."', '".$value."');";
                     if (mysqli_query($conn, $sql)) {
-
+                        
                     } else {
                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                     }
                 }
-            }
-            else{
-                $msg = "<div class='alert alert-danger' role='alert'>Error, no dates registered!</div>";
             }
                 
             

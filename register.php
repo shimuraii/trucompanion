@@ -93,7 +93,7 @@ body{
             <textarea class="form-control" required="required" name="bio" id="exampleFormControlTextarea1" rows="3"></textarea>
 
             <label for="FormControlTextarea3" class="form-label">Social Media link</label>
-            <textarea class="form-control" required="required" name="sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" required="required" name="sm " id="exampleFormControlTextarea1" rows="3"></textarea>
             <br>
             
             Monday
@@ -139,7 +139,7 @@ Tuesday
     <ul class="dropdown-menu">
             
             <ul>
-                <li><input type ="checkbox" name="dates[]" value="TU0"> 00:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="TU24"> 00:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TU1"> 01:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TU2"> 02:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TU3"> 03:00AM</li>
@@ -174,7 +174,7 @@ Tuesday
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
             
-                <li><input type ="checkbox" name="dates[]" value="W0"> 00:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="W24"> 00:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="W1"> 01:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="W2"> 02:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="W3"> 03:00AM</li>
@@ -210,7 +210,7 @@ Tuesday
     <ul class="dropdown-menu">
          
             
-                <li><input type ="checkbox" name="dates[]" value="TH0"> 00:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="TH24"> 00:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TH1"> 01:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TH2"> 02:00AM</li>
                 <li><input type ="checkbox" name="dates[]" value="TH3"> 03:00AM</li>
@@ -245,31 +245,31 @@ Tuesday
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
             
-                <li><input type ="checkbox" name="dates[]" value="FR0"> 00:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR1"> 01:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR2"> 02:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR3"> 03:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR4"> 04:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR5"> 05:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR6"> 06:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR7"> 07:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR8"> 08:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR9"> 09:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR10"> 10:00AM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR11"> 11:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F24"> 00:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F1"> 01:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F2"> 02:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F3"> 03:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F4"> 04:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F5"> 05:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F6"> 06:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F7"> 07:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F8"> 08:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F9"> 09:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F10"> 10:00AM</li>
+                <li><input type ="checkbox" name="dates[]" value="F11"> 11:00AM</li>
                 <br>
-                <li><input type ="checkbox" name="dates[]" value="FR12"> 12:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR13"> 01:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR14"> 02:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR15"> 03:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR16"> 04:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR17"> 05:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR18"> 06:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR19"> 07:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR20"> 08:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR21"> 09:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR22"> 10:00PM</li>
-                <li><input type ="checkbox" name="dates[]" value="FR23"> 11:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F12"> 12:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F13"> 01:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F14"> 02:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F15"> 03:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F16"> 04:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F17"> 05:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F18"> 06:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F19"> 07:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F20"> 08:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F21"> 09:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F22"> 10:00PM</li>
+                <li><input type ="checkbox" name="dates[]" value="F23"> 11:00PM</li>
             </ul>
             </div>
   </div>
@@ -315,7 +315,7 @@ Tuesday
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
             
-                <li><input type ="checkbox" name="sunday[]" value="SU0"> 00:00AM</li>
+                <li><input type ="checkbox" name="sunday[]" value="SU24"> 00:00AM</li>
                 <li><input type ="checkbox" name="sunday[]" value="SU1"> 01:00AM</li>
                 <li><input type ="checkbox" name="sunday[]" value="SU2"> 02:00AM</li>
                 <li><input type ="checkbox" name="sunday[]" value="SU3"> 03:00AM</li>
