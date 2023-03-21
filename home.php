@@ -220,7 +220,7 @@ function find_time($e){
     foreach($s as $e){
         echo "<p style='text-align:center'>" . $time_map[$e]  . "</p>";
     }
-    echo "<marquee style='font-size:40px;'>Check other people's times!!</marquee>";
+    echo "<h3 style='font-size:40px; text-align:center;'>Check other people's times!!</h3>";
     $u = $_SESSION['data'];
     foreach ($u as $element) {
         if ($element['Username'] == $_SESSION['username']){
