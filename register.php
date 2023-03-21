@@ -93,7 +93,7 @@ body{
             <textarea class="form-control" required="required" name="bio" id="exampleFormControlTextarea1" rows="3"></textarea>
 
             <label for="FormControlTextarea3" class="form-label">Social Media link</label>
-            <textarea class="form-control" required="required" name="sm " id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" required="required" name="sm" id="exampleFormControlTextarea1" rows="3"></textarea>
             <br>
             
             Monday

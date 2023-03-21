@@ -233,7 +233,8 @@ function find_time($e){
             <h5 class='card-title'>" . $element['Name'] ."</h5>
             <p class='card-text'>". $element['bio'] ."</p>
             <a href='" . $element['sm'] .  "' class='card-link'>Social Media link</a><br>
-            <a href = 'mailto:". $element['Email'] ."?subject = Feedback&body = Message'>". $element['Email'] ."</a><br><br>
+            <a href = 'mailto:". $element['Email'] ."?subject = Feedback&body = Message'>". $element['Email'] ."</a>
+            <h3>Schedule</h3>
           ";
             $email = get_email($element['Username']);
             $email = json_encode($email);
