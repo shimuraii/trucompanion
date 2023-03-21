@@ -38,7 +38,7 @@ if ($page == 'starterpage')
                 }
             }
             $_SESSION['user_s'] = $user_s;
-
+            
             $_SESSION['email'] = $msg;
             
             include('home.php');

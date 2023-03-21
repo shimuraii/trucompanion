@@ -40,6 +40,19 @@ function get_email($u){
 
     return $data;
 }
+function get_alle(){
+    global $conn;
+    
+    $sql = "SELECT Email from Users";  // where Question is like 
+    $result = mysqli_query($conn, $sql);
+
+    $data = [];
+    while($row = mysqli_fetch_array($result)){
+        array_push($data, $row);
+    }
+
+    return $data;
+}
 function find_times($e){
     global $conn;
     
@@ -53,37 +66,6 @@ function find_times($e){
 
     return $data;
 }
-function signup_user($u, $p, $e) { // inserts user
-    global $conn;
-    $current_date = date("Ymd");  // There is an example in Seminar 6.docx.
-    $sql = "insert into Users values (NULL, '$u','$p','$e',$current_date)"; 
-    $result = mysqli_query($conn, $sql);
-    return $result;
-}
-
-function insertQuestion($q, $u) {
-    global $conn;
-
-    $current_date = date("Ymd");
-    $sql = "insert into Questions values (NULL,'$q','$u',$current_date)";
-    $result = mysqli_query($conn, $sql);
-    return $result;
-}
-
-function searchQuestions($term) {
-    global $conn;
-    
-    $sql = "SELECT * from Questions where Question LIKE '%$term%'";  // where Question is like 
-    $result = mysqli_query($conn, $sql);
-
-    $data = [];
-    while($row = mysqli_fetch_array($result)){
-        array_push($data, $row);
-    }
-
-    return $data;
-}
-
 
 
 ?>     

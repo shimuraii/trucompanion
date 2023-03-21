@@ -1,3 +1,6 @@
+
+<h1 style="text-align:center;"> Your Available Times: </h1>
+
 <?php 
 
 
@@ -172,11 +175,10 @@ $time_map = array(
     'SU24' => 'Sunday 24:00'
 );
 
-// check if username and password match and exist otherwise go back to index, otherwise include mainpage.php
-    if ($msg){echo $msg;}
+
     $s = $_SESSION['user_s'];
     foreach($s as $e){
-        echo $e;
+        echo "<p style='text-align:center'>" . $time_map[$e]  . "</p>" . "<br>";
     }
 ?>
 
@@ -199,4 +201,5 @@ $time_map = array(
 
   </body>
 
-<marquee>aa</marquee>
+<marquee style='font-size:40px;'>Check other people's times!!</marquee>
+
